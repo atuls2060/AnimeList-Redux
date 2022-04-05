@@ -1,0 +1,14 @@
+body {
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: transform 300ms;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}

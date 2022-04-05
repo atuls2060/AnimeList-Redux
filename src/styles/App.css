@@ -1,0 +1,64 @@
+header {
+  background-color: #1976d2;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  height: 72px;
+  line-height: 72px;
+}
+
+.brand {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  cursor: pointer;
+}
+
+footer {
+  padding: 40px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: inherit;
+}
+
+/*             Search Box            */
+
+.search-box-container {
+  margin: 32px 0px;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+.search-box {
+  padding: 12px;
+  border-radius: 5px;
+  outline: none;
+  flex: 1;
+  border: none;
+  font-family: inherit;
+}
+.search-box:focus {
+  border-color: #1976d2;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0 0 8px rgba(25, 118, 210, 0.8);
+  outline: 0 none;
+}
+.fa-search {
+  padding: 12px;
+  background-color: #1976d2;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+/*             Search Box End            */
+
+/*             Grid            */
+
+.container-grid {
+  min-height: 65vh;
+  display: grid;
+  gap: 32px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 318px);
+}
+/*             Grid End            */

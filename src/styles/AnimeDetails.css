@@ -1,0 +1,133 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700");
+
+.anime-detail-card {
+  width: 100%;
+  margin: 60px auto;
+  position: relative;
+  max-width: 850px;
+}
+
+.anime-banner {
+  padding-top: calc(100% / (16 / 9)); /* 16:9 ratio  */
+  position: relative;
+}
+.anime-banner .banner-image {
+  position: absolute;
+  top: 0;
+}
+.anime-banner::after {
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+}
+
+.anime-poster {
+  padding-top: calc(180px / (4 / 6)); /* 4:6 ratio  */
+  position: relative;
+  width: 100%;
+  max-width: 180px;
+}
+.anime-poster img {
+  position: absolute;
+  top: 0;
+}
+
+.anime-detail-content-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  min-height: 480px;
+  gap: 25px;
+  align-items: center;
+  padding: 25px;
+  color: white;
+}
+
+.anime-detail-content-header h2 {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.anime-detail-content-header .label {
+  border: 1px solid rgba(151, 96, 96, 0.3);
+  margin: 15px 5px;
+  display: inline-block;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 7px;
+}
+
+.anime-detail-content-header p {
+  font-size: 15px;
+  line-height: 28px;
+  margin: 25px 0px 45px;
+}
+
+.anime-maker-info {
+  margin-top: 15px;
+  display: flex;
+}
+.anime-maker-info span {
+  min-width: 80px;
+  display: inline-block;
+}
+
+.anime-maker-info a {
+  text-decoration: none;
+  margin-left: 20px;
+  color: white;
+  word-wrap: break-word;
+}
+
+.anime-detail-content-footer {
+  border: 1px solid #ddd;
+  padding: 30px;
+  border-top: 0px;
+  background: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.anime-detail-content-footer p {
+  font-size: 13px;
+  line-height: 28px;
+  color: #444;
+  margin: 15px 0px;
+}
+
+/*Media Query*/
+
+@media (max-width: 785px) {
+  .anime-detail-content {
+    transform: translateY(-185px);
+    transition: none;
+  }
+
+  .anime-detail-content-header {
+    position: relative;
+    color: black;
+    display: block;
+  }
+  .anime-detail-content-header h2 {
+    margin-top: 35px;
+  }
+  .anime-detail-content-header .label {
+    color: black;
+    background: transparent;
+  }
+  .anime-detail-content-header p {
+    color: #555;
+  }
+
+  .anime-maker-info a {
+    color: #000;
+  }
+  .anime-detail-content-footer {
+    border-top: 1px solid #ddd;
+  }
+}

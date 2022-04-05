@@ -1,11 +1,27 @@
+import { useSelector } from "react-redux";
 import AnimeCard from "./AnimeCard";
+import AnimeCardLoader from "../utils/Loaders/AnimeCardLoader";
 const AnimeList = () => {
+  //getting animeList from redux store
+  const animeList = useSelector((state) => state.animeList);
+
+  //de-structuring animeList
+  const { loading, animes, error } = animeList;
+  //error variable can be used to handle errors
+
   return (
-    <div>
-      <h2>Anime List</h2>
-      <AnimeCard />
-      <AnimeCard />
-      <AnimeCard />
+    <div className="container">
+      {
+        //show loading skeleton card if loading
+        loading && <AnimeCardLoader />
+      }
+      <div className="container-grid">
+        {
+          //map data to anime cards if not loading
+          !loading &&
+            animes.map((anime) => <AnimeCard key={anime.id} anime={anime} />)
+        }
+      </div>
     </div>
   );
 };
