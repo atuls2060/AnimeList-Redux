@@ -17,8 +17,9 @@ const AnimeList = () => {
       }
       <div className="container-grid">
         {
-          //map data to anime cards if not loading
+          //map data to anime cards if not loading and  animes not empty
           !loading &&
+            animes &&
             animes.map((anime) => <AnimeCard key={anime.id} anime={anime} />)
         }
       </div>

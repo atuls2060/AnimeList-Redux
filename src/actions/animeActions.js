@@ -15,7 +15,7 @@ export const listAnimes =
       dispatch({ type: ANIME_LIST_REQUEST });
 
       //if keyword is not empty then search for query
-      let url = `http://ghibliapi.herokuapp.com/films${
+      let url = `https://ghibliapi.herokuapp.com/films${
         keyword && `?title=${keyword}`
       }`;
 
@@ -38,7 +38,7 @@ export const listAnimeDetails = (id) => async (dispatch) => {
     dispatch({ type: ANIME_DETAILS_REQUEST });
 
     const { data } = await axios.get(
-      `http://ghibliapi.herokuapp.com/films/${id}`
+      `https://ghibliapi.herokuapp.com/films/${id}`
     );
 
     dispatch({
